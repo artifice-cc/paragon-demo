@@ -1,0 +1,8 @@
+(turn-on-debugging)
+(-> (new-fdn)
+    (add-initial :rain)
+    (add-initial :sprinkler)
+    (can-explain [:rain] [:grass-wet])
+    (can-explain [:sprinkler] [:grass-wet])
+    (abduce [:rain :sprinkler])
+    (contract [:grass-wet]))
